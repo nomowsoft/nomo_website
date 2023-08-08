@@ -34,7 +34,6 @@ export const getStaticProps = async ({locale}) => {
     },
   }
 }
-
 export default function Home({
   posts_about_us, 
   posts_our_services, 
