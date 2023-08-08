@@ -8,19 +8,12 @@ import {
 import Image from "next/image";
 import useTranslation from "next-translate/useTranslation";
 
-import { Icon } from "react-icons-kit";
-import { twitterSquare } from "react-icons-kit/fa/twitterSquare";
-import { facebookSquare } from "react-icons-kit/fa/facebookSquare";
-import { whatsapp } from "react-icons-kit/fa/whatsapp";
-import { linkedinSquare } from "react-icons-kit/fa/linkedinSquare";
-import { mail } from "react-icons-kit/feather/mail";
-
 const About = ({ feedbacks }) => {
-  const i18n = useTranslation();
+  const t = useTranslation();
   return (
     <AboutBox id="about_us">
       <AboutContainer>
-        <AboutTitle>{i18n.t("common:about_us")}</AboutTitle>
+        <AboutTitle>{t.t("common:about_us")}</AboutTitle>
         {/* <TitleBorder src={iii} /> */}
         <ListItems>
           {feedbacks?.map((feed, i) => (
@@ -30,10 +23,10 @@ const About = ({ feedbacks }) => {
               </div>
               <p className="text">{feed.content}</p>
               <div className="user-box">
-                <img
+                <image
                   src={feed.icon}
-                  height="80px"
-                  width="80px"
+                  // height={"80px"}
+                  // width="80px"
                   alt="imag"
                   className="user-image"
                 />

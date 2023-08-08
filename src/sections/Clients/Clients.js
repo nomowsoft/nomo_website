@@ -10,11 +10,11 @@ import {
 import Image from "next/image";
 
 const Clients = ({ clients }) => {
-  const i18n = useTranslation();
+  const t = useTranslation();
   return (
     <ClientBox id="clients">
       <ClientContainer>
-        <ClientTitle>{i18n.t("common:clients")}</ClientTitle>
+        <ClientTitle>{t.t("common:clients")}</ClientTitle>
         <BoxSlider>
           <motion.div
             className="box"
@@ -24,10 +24,10 @@ const Clients = ({ clients }) => {
             <div className="box-clone-list">
               {clients?.map((item, i) => (
                 <div key={i} className="box-icon">
-                  <img
+                  <Image
                     src={item.icon}
-                    width="100px"
-                    height="100px"
+                    // width="100px"
+                    // height="100px"
                     alt=""
                     layout="fill"
                   />

@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-// import useTranslation from "next-translate/useTranslation";
 import { useRouter } from "next/router";
 import useTranslation from "next-translate/useTranslation";
 import {
@@ -16,7 +15,7 @@ import {
 } from "./StartForm.styles";
 
 const StartForm = () => {
-  const i18n = useTranslation();
+  const t = useTranslation();
   const { locale } = useRouter();
   const [state, setState] = React.useState({});
   const [apiMsg, setApiMsg] = React.useState({});
@@ -83,7 +82,7 @@ const StartForm = () => {
         </ApiMassage>
         <Form onSubmit={handleSubmit}>
           <Label>
-            {i18n.t("common:first_name")}
+            {t.t("common:first_name")}
             <TextInput
               name="first_name"
               value={state.first_name}
@@ -92,7 +91,7 @@ const StartForm = () => {
             />
           </Label>
           <Label>
-            {i18n.t("common:last_name")}
+            {t.t("common:last_name")}
             <TextInput
               name="last_name"
               value={state.last_name}
@@ -101,7 +100,7 @@ const StartForm = () => {
             />
           </Label>
           <Label col={2}>
-            {i18n.t("common:email")}
+            {t.t("common:email")}
             <TextInput
               name="email"
               value={state.email}
@@ -111,7 +110,7 @@ const StartForm = () => {
             />
           </Label>
           <Label col={2}>
-            {i18n.t("common:mobile")}
+            {t.t("common:mobile")}
             <TextInput
               name="mobile"
               value={state.phone_number}
@@ -121,7 +120,7 @@ const StartForm = () => {
             />
           </Label>
           <Label col={2}>
-            {i18n.t("common:description")}
+            {t.t("common:description")}
             <TextArea
               name="description"
               value={state.phone_number}

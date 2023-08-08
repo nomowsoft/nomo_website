@@ -13,13 +13,13 @@ import {
 
 const Services = ({ services }) => {
   const theme = React.useContext(ThemeContext);
-  const i18n = useTranslation();
+  const t = useTranslation();
   const { push } = useRouter();
 
   return (
     <ServicesContainer>
       <ServicesBox>
-        <ServicesTitle>{i18n.t("common:services")}</ServicesTitle>
+        <ServicesTitle>{t.t("common:services")}</ServicesTitle>
         {/* List */}
         <ListBox {...sliderSettings} rtl={theme.isRtl}>
           {services?.map((service, i) => (
@@ -32,7 +32,7 @@ const Services = ({ services }) => {
                 </p>
               </div>
               <CardBtn
-                title={i18n.t("common:request_service")}
+                title={t.t("common:request_service")}
                 btnStyle="success"
                 onClick={() => push("/start_demo")}
               />
